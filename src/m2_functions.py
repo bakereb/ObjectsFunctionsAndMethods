@@ -38,6 +38,7 @@ def main():
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
     window.close_on_mouse_click()
 
@@ -115,7 +116,26 @@ def turtle4():
     phil.draw_circle(50)
 
 
-def
+def turtle5():
+    mike = rg.SimpleTurtle()
+    mike.pen = rg.Pen('red', 5)
+    evil = rg.SimpleTurtle()
+    evil.pen = rg.Pen('green', 5)
+
+    mike.speed = 20
+    evil.speed = 20
+
+    mike.pen_down()
+    mike.draw_circle(70)
+
+    evil.pen_down()
+
+    for k in range(8):
+        evil.draw_regular_polygon(9, 50)
+        evil.right(45)
+        evil.forward(10)
+
+
 ########################################################################
 #
 # DONE: 2.
@@ -196,7 +216,7 @@ def
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
