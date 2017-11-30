@@ -50,7 +50,6 @@ def two_circles():
     window.close_on_mouse_click()
 
 
-
 def circle_and_rectangle():
     """
     -- Constructs an rg.RoseWindow.
@@ -92,11 +91,19 @@ def circle_and_rectangle():
     #       instance variables for outline thickness, etc.
     # ------------------------------------------------------------------
     window = rg.RoseWindow()
-    center_point = rg.Point(200, 200)
-    point1 = rg.Point(20, 50)
-    point2 = rg.Point(40, 40)
+    cpx = 200
+    cpy = 200
+    center_point = rg.Point(cpx, cpy)
+    x1 = 20
+    y1 = 50
+    x2 = 100
+    y2 = 100
+    point1 = rg.Point(x1, y1)
+    point2 = rg.Point(x2, y2)
     rectangle = rg.Rectangle(point1, point2)
     circle = rg.Circle(center_point, 20)
+    circle.outline_thickness = 8
+    rectangle.outline_thickness = 6
 
     circle.fill_color = 'blue'
     circle.attach_to(window)
@@ -104,9 +111,18 @@ def circle_and_rectangle():
 
     window.render()
 
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(center_point)
+    print(cpx)
+    print(cpy)
+    print(rectangle.outline_thickness)
+    print('none')
+    print((x2 + x1)/2, (y1 + y2)/2)
+    print((x2 + x1)/2)
+    print((y1 + y2)/2)
+
     window.close_on_mouse_click()
-
-
 
 
 def lines():
