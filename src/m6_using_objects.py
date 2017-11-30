@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
+    lines()
 
 
 def two_circles():
@@ -82,7 +83,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -150,6 +151,25 @@ def lines():
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     # ------------------------------------------------------------------
+    window = rg.RoseWindow()
+    point1 = rg.Point(100, 300)
+    point2 = rg.Point(50, 250)
+    point3 = rg.Point(40,200)
+    point4 = rg.Point(70, 150)
+    line1 = rg.Line(point1, point2)
+    line2 = rg.Line(point3, point4)
+    line2.thickness = 4
+    midpoint2 = rg.Line.get_midpoint(line2)
+    print(midpoint2)
+    print((40 +70)/2)
+    print((150 +200)/2)
+
+    line1.attach_to(window)
+    line2.attach_to(window)
+    window.render()
+
+    window.close_on_mouse_click()
+
 
 
 # ----------------------------------------------------------------------
